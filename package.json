@@ -1,5 +1,6 @@
 {
     "name": "eloqua-request"
+  , "author": "Seth Carney <seth.carney@eloqua.com>",
   , "version": "0.0.1"
   , "private": true
   , "description": "Access ELOQUA's public REST API"
