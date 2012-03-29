@@ -7,4 +7,5 @@
       $ npm install
 
 ## Use It
-  $ examples to be provided
+      
+      $ examples to be provided
