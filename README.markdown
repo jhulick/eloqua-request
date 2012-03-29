@@ -8,6 +8,7 @@
 
 ## Use It
 
+    * Get
       var Eloqua = require('eloqua-request');
       var eloqua = new Eloqua('http://secure.eloqua.com', 'site', 'user', 'pw');
       eloqua.get('/API/REST/2.0/settings/dashboard/home?depth=complete&extensions=e10', function(err, response){
