@@ -2,6 +2,12 @@
     "name": "eloqua-request"
   , "version": "0.0.1"
   , "private": true
+  , "description": "Access ELOQUA's public REST API"
+  , "tags": ["eloqua", "request"]
+  , "repository": {
+      "type": "git",
+      "url": "http://git/scarney/eloqua-request"
+  }
   , "dependencies": {
         "request": "*"
       , "b64": "*"
