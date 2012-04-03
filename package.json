@@ -3,7 +3,7 @@
   , "license": "MIT"
   , "author": "Seth Carney <seth.carney@eloqua.com>",
   , "version": "0.0.1"
-  , "private": true
+  , "private": false
   , "description": "Access Eloqua's public REST API"
   , "tags": ["eloqua", "request"]
   , "repository": {
