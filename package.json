@@ -1,17 +1,17 @@
 {
     "name": "eloqua-request"
   , "license": "MIT"
-  , "author": "Seth Carney <seth.carney@eloqua.com>",
+  , "author": "Seth Carney <seth.carney@eloqua.com>"
   , "version": "0.0.1"
   , "private": false
   , "description": "Access Eloqua's public REST API"
   , "tags": ["eloqua", "request"]
   , "repository": {
-      "type": "git",
-      "url": "http://git/scarney/eloqua-request"
+        "type": "git"
+      , "url": "http://git/scarney/eloqua-request"
   }
   , "dependencies": {
-        "request": "*"
-      , "b64": "*"
+        "request": ">= 2.9.153"
+      , "b64": "1.0.1"
   }
 }
