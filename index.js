@@ -14,7 +14,7 @@ EloquaRequest.prototype.request = function(url, options, callback) {
     requestOptions[key] = val;
   }
 	console.log((requestOptions.method || "GET") + ": " + requestOptions.url);
-  
+
   return request(requestOptions, function(err, response, body) {
 		if (err !== null) return callback(err, null);
 		if (response.statusCode !== 200 && response.statusCode !== 201) return callback({ code: response.statusCode, msg: body }, null);
