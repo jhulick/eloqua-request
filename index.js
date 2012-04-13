@@ -1,8 +1,8 @@
 var b64 = require('b64');
 var request = require('request');
 
-function EloquaRequest(baseUrl, site, user, password) {
-	this.baseUrl = baseUrl;
+function EloquaRequest(site, user, password, baseUrl) {
+	this.baseUrl = baseUrl || 'https://secure.eloqua.com';
 	this.credential = b64.encode(site + "\\" + user + ":" + password);
 }
 

@@ -23,16 +23,15 @@ mockery.disable();
 
 describe('eloqua-request', function(){
 
-  var baseUri = 'http://eloqua/API/';
   var site = 'TestSite';
   var user = 'TestUser';
   var password = 'TestPwd';
-  var resource = 'some_resource';
+  var resource = '/API/some_resource';
   var base64encodedCredential = 'Basic BASE_64:' + site + '\\' + user + ':' + password;
   var api;
 
   beforeEach(function(){
-    api = new EloquaApi(baseUri, site, user, password);
+    api = new EloquaApi(site, user, password);
   });
 
   describe('#get', function(){
@@ -48,7 +47,7 @@ describe('eloqua-request', function(){
     });
 
     it('sends the correct URI', function(){
-      requestOptions.url.should.eql('http://eloqua/API/some_resource');
+      requestOptions.url.should.eql('https://secure.eloqua.com/API/some_resource');
     });
 
     it('does not specify a method', function(){
@@ -81,7 +80,7 @@ describe('eloqua-request', function(){
     });
 
     it('sends the correct URI', function(){
-      requestOptions.url.should.eql('http://eloqua/API/some_resource');
+      requestOptions.url.should.eql('https://secure.eloqua.com/API/some_resource');
     });
 
     it('specifies POST method', function(){
@@ -114,7 +113,7 @@ describe('eloqua-request', function(){
     });
 
     it('sends the correct URI', function(){
-      requestOptions.url.should.eql('http://eloqua/API/some_resource');
+      requestOptions.url.should.eql('https://secure.eloqua.com/API/some_resource');
     });
 
     it('specifies PUT method', function(){
@@ -130,6 +129,14 @@ describe('eloqua-request', function(){
       should.exist(requestOptions.headers);
       should.exist(requestOptions.headers.Authorization);
       requestOptions.headers.Authorization.should.eql(base64encodedCredential);
+    });
+  });
+
+  it('can override baseUri', function(done){
+    var api2 = new EloquaApi(site, user, password, 'https://foo');
+    api2.get(resource, function(err, body){
+      requestOptions.url.should.eql('https://foo/API/some_resource');
+      done();
     });
   });
 
