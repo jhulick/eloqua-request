@@ -100,4 +100,37 @@ describe('eloqua-request', function(){
     });
   });
 
+  describe('#put', function(){
+
+    var err, body;
+    var data = {foo: 'bar'};
+
+    beforeEach(function(done){
+      api.put(resource, data, function(_err, _body){
+        err = _err;
+        body = _body;
+        done();
+      });
+    });
+
+    it('sends the correct URI', function(){
+      requestOptions.url.should.eql('http://eloqua/API/some_resource');
+    });
+
+    it('specifies PUT method', function(){
+      requestOptions.method.should.eql('PUT');
+    });
+
+    it('has a body', function(){
+      should.exist(requestOptions.body);
+      requestOptions.body.foo.should.eql('bar');
+    });
+
+    it('base-64 encodes Basic Auth creds', function(){
+      should.exist(requestOptions.headers);
+      should.exist(requestOptions.headers.Authorization);
+      requestOptions.headers.Authorization.should.eql(base64encodedCredential);
+    });
+  });
+
 });
