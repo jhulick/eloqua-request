@@ -13,7 +13,6 @@ EloquaRequest.prototype.request = function(url, options, callback) {
     var val = options[key];
     requestOptions[key] = val;
   }
-	console.log((requestOptions.method || "GET") + ": " + requestOptions.url);
 
   return request(requestOptions, function(err, response, body) {
 		if (err !== null) return callback(err, null);

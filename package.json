@@ -17,6 +17,7 @@
   , "devDependencies": {
        "mocha": "*"
      , "should": "*"
+     , "mockery": "*"
   }
   , "scripts": {
        "test": "./node_modules/mocha/bin/mocha"
