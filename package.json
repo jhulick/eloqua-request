@@ -6,7 +6,7 @@
   , "keywords": ["eloqua", "request", "REST", "API"]
   , "homepage": "https://github.com/Eloqua/eloqua-request"
   , "bugs": {
-        url: "https://github.com/Eloqua/eloqua-request/issues"
+        "url": "https://github.com/Eloqua/eloqua-request/issues"
   }
   , "repository": {
        "type": "git"
