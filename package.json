@@ -5,7 +5,9 @@
   , "description": "Access Eloqua's public REST API using node.js."
   , "keywords": ["eloqua", "request", "REST", "API"]
   , "homepage": "https://github.com/Eloqua/eloqua-request"
-  , "bugs": "https://github.com/Eloqua/eloqua-request/issues"
+  , "bugs": {
+        url: "https://github.com/Eloqua/eloqua-request/issues"
+  }
   , "repository": {
        "type": "git"
      , "url": "git@github.com:Eloqua/eloqua-request.git"
