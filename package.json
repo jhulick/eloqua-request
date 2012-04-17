@@ -4,11 +4,11 @@
   , "private": false
   , "description": "Access Eloqua's public REST API using node.js."
   , "keywords": ["eloqua", "request", "REST", "API"]
-  , "homepage": "http://git/scarney/eloqua-request"
-  , "bugs": "http://git/scarney/eloqua-request/issues"
+  , "homepage": "https://github.com/Eloqua/eloqua-request"
+  , "bugs": "https://github.com/Eloqua/eloqua-request/issues"
   , "repository": {
        "type": "git"
-     , "url": "git@git:scarney/eloqua-request.git"
+     , "url": "git@github.com:Eloqua/eloqua-request.git"
   }
   , "dependencies": {
        "request": ">= 2.9.x"
